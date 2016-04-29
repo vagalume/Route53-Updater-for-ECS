@@ -14,12 +14,12 @@ RUN apt-get -q -y install python2.7 \
 
 RUN apt-get -q -y clean && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
-ENV AWS_ACCESS_KEY_ID abc
-ENV AWS_SECRET_ACCESS_KEY def
+ENV AWS_ACCESS_KEY_ID
+ENV AWS_SECRET_ACCESS_KEY
 ENV AWS_ROUTE53_ZONEID xxx
 ENV AWS_ROUTE53_HOST example.domain.com
-ENV AWS_ROUTE53_TTL 60
-ENV UPDATE_INTERVAL 60
+ENV AWS_ROUTE53_TTL 200
+ENV UPDATE_INTERVAL 1000
 
 # You can use public web services that provide plain text IP address
 # Example: https://wtfismyip.com/text
